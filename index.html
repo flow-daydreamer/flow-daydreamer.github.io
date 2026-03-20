@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张显平 - 简历概览</title>
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 全局CSS变量 - 统一配色 */
+        :root {
+            --primary: #4361ee;
+            --primary-light: #5874f5;
+            --secondary: #3f37c9;
+            --bg-light: #f8f9fa;
+            --text-dark: #2b2d42;
+            --text-gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 20px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+
+        /* 全局重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", "Microsoft YaHei", sans-serif;
+            scroll-behavior: smooth; /* 平滑滚动 */
+        }
+
+        body {
+            background: linear-gradient(120deg, #f5f7ff 0%, #eef2ff 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+        }
+
+        /* 固定导航头部 */
+        .header {
+            background: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .header h1 i {
+            font-size: 1.8rem;
+        }
+
+        /* 主容器 */
+        .container {
+            max-width: 1000px;
+            margin: 8rem auto 4rem;
+            padding: 0 2rem;
+        }
+
+        /* 简历卡片样式 */
+        .resume-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            border-top: 4px solid var(--primary);
+        }
+
+        .resume-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* 导航项样式 */
+        .nav-item {
+            margin: 1.5rem 0;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .nav-item a {
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: var(--transition);
+        }
+
+        .nav-item a:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+
+        .nav-item a i {
+            font-size: 1.4rem;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            border-radius: 50%;
+            color: var(--primary);
+        }
+
+        /* 概览信息样式 */
+        .overview {
+            color: var(--text-gray);
+            font-size: 1rem;
+            margin-top: 0.8rem;
+            padding-left: 2.8rem;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .overview i {
+            font-size: 0.9rem;
+            color: var(--primary-light);
+        }
+
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 45px;
+            height: 45px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0.8;
+        }
+
+        .back-to-top:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .container {
+                margin: 7rem auto 2rem;
+                padding: 0 1rem;
+            }
+            .resume-card {
+                padding: 1.5rem;
+            }
+            .header-content {
+                padding: 0 1rem;
+            }
+            .nav-item a {
+                font-size: 1.1rem;
+            }
+            .overview {
+                padding-left: 2.5rem;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 固定头部导航 -->
+    <div class="header">
+        <div class="header-content">
+            <h1><i class="fas fa-user-tie"></i> 张显平 - 个人简历</h1>
+            <div><i class="fas fa-code"></i> 数据科学与大数据技术</div>
+        </div>
+    </div>
+
+    <!-- 主内容容器 -->
+    <div class="container">
+        <div class="resume-card">
+            <!-- 基础信息导航 -->
+            <div class="nav-item">
+                <a href="basic-info.html">
+                    <i class="fas fa-id-card"></i>
+                    1. 基础信息
+                </a>
+                <p class="overview">
+                    <i class="fas fa-info-circle"></i>
+                    昆明学院 | 数据科学与大数据技术 | 22岁 | 英语六级495分 | 求职意向：大数据开发/数据分析
+                </p>
+            </div>
+
+            <!-- 获奖经历导航 -->
+            <div class="nav-item">
+                <a href="awards.html">
+                    <i class="fas fa-trophy"></i>
+                    2. 获奖经历
+                </a>
+                <p class="overview">
+                    <i class="fas fa-medal"></i>
+                    第四届全国大学生C语言程序设计大赛三等奖（2024） | 挑战杯二等奖（2023）
+                </p>
+            </div>
+
+            <!-- 学业情况导航 -->
+            <div class="nav-item">
+                <a href="academic.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    3. 学业情况
+                </a>
+                <p class="overview">
+                    <i class="fas fa-book"></i>
+                    GPA 3.4/4.0 | 专业排名前30% | 核心课程：Python、大数据分析、数据库原理
+                </p>
+            </div>
+
+            <!-- 项目经历导航 -->
+            <div class="nav-item">
+                <a href="project.html">
+                    <i class="fas fa-laptop-code"></i>
+                    4. 项目经历
+                </a>
+                <p class="overview">
+                    <i class="fas fa-project-diagram"></i>
+                    校园消费数据分析系统 | 基于C语言的学生成绩管理系统
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+</body>
+</html>

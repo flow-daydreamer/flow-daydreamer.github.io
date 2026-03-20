@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张显平 - 基础信息</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #5874f5;
+            --secondary: #3f37c9;
+            --bg-light: #f8f9fa;
+            --text-dark: #2b2d42;
+            --text-gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 20px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", "Microsoft YaHei", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(120deg, #f5f7ff 0%, #eef2ff 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            padding-top: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 4px solid var(--primary);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f2ff;
+        }
+
+        .card-header h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .card-header i {
+            font-size: 2rem;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            border-radius: 50%;
+        }
+
+        .info-list {
+            list-style: none;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            line-height: 2.2;
+        }
+
+        .info-list li {
+            margin: 1rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .info-list li span {
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 120px;
+            display: inline-block;
+            color: var(--primary);
+        }
+
+        .info-list li i {
+            color: var(--primary-light);
+            margin-top: 0.5rem;
+        }
+
+        /* 技能卡片 */
+        .skills {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-light);
+        }
+
+        .skills h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .skill-item h4 {
+            margin-bottom: 0.8rem;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-item h4 i {
+            color: var(--primary);
+        }
+
+        .skill-item ul {
+            padding-left: 1.5rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* 按钮样式 */
+        .btn-group {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(67, 97, 238, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            .info-list li {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .info-list li span {
+                min-width: auto;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-id-card"></i>
+                <h1>基础信息</h1>
+            </div>
+
+            <ul class="info-list">
+                <li><i class="fas fa-user"></i><span>姓名：</span>张显平</li>
+                <li><i class="fas fa-birthday-cake"></i><span>年龄：</span>22岁</li>
+                <li><i class="fas fa-map-marker-alt"></i><span>籍贯：</span>云南昆明</li>
+                <li><i class="fas fa-university"></i><span>学校：</span>昆明学院</li>
+                <li><i class="fas fa-book-open"></i><span>专业：</span>数据科学与大数据技术（本科）</li>
+                <li><i class="fas fa-calendar-alt"></i><span>毕业时间：</span>2025年6月（预计）</li>
+                <li><i class="fas fa-language"></i><span>英语等级：</span>大学英语六级（495分，具备读写译能力）</li>
+                <li><i class="fas fa-phone"></i><span>联系方式：</span>138XXXX1234（虚拟）</li>
+                <li><i class="fas fa-envelope"></i><span>电子邮箱：</span>zhangxianping@example.com（虚拟）</li>
+                <li><i class="fas fa-briefcase"></i><span>求职意向：</span>大数据开发工程师、数据分析专员</li>
+            </ul>
+
+            <!-- 技能证书板块 -->
+            <div class="skills">
+                <h3><i class="fas fa-cogs"></i> 核心技能 & 证书</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4><i class="fas fa-code"></i> 编程语言</h4>
+                        <ul>
+                            <li>Python（熟练）- 数据处理/分析</li>
+                            <li>C语言（精通）- 算法/系统开发</li>
+                            <li>SQL（熟练）- 数据库查询/优化</li>
+                        </ul>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-database"></i> 大数据工具</h4>
+                        <ul>
+                            <li>Hadoop（基础应用）- 分布式存储</li>
+                            <li>Spark（基础应用）- 数据计算</li>
+                            <li>Hive（了解）- 数据仓库</li>
+                        </ul>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-chart-bar"></i> 办公工具</h4>
+                        <ul>
+                            <li>Excel - 数据透视表/函数</li>
+                            <li>PowerBI - 数据可视化</li>
+                            <li>Git - 版本控制</li>
+                        </ul>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-certificate"></i> 证书</h4>
+                        <ul>
+                            <li>全国计算机二级（C语言）</li>
+                            <li>普通话二级甲等</li>
+                            <li>大学英语六级（495分）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> 返回概览页</a>
+                <a href="#top" class="btn btn-outline"><i class="fas fa-arrow-up"></i> 返回顶部</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

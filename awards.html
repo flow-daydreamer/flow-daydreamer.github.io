@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张显平 - 获奖经历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #5874f5;
+            --secondary: #3f37c9;
+            --bg-light: #f8f9fa;
+            --text-dark: #2b2d42;
+            --text-gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 20px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", "Microsoft YaHei", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(120deg, #f5f7ff 0%, #eef2ff 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            padding-top: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 4px solid var(--primary);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f2ff;
+        }
+
+        .card-header h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .card-header i {
+            font-size: 2rem;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            border-radius: 50%;
+        }
+
+        /* 获奖卡片 */
+        .award-list {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .award-item {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 2rem;
+            border-left: 4px solid var(--primary-light);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, rgba(67, 97, 238, 0.05), transparent);
+            border-radius: 0 0 0 100%;
+        }
+
+        .award-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-left-color: var(--secondary);
+        }
+
+        .award-item h3 {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .award-item h3 i {
+            color: #f7b500;
+            font-size: 1.5rem;
+        }
+
+        .award-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .award-meta p {
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .award-meta p i {
+            color: var(--primary-light);
+        }
+
+        .award-desc {
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            padding-left: 0.5rem;
+            border-left: 2px solid #eee;
+            margin-top: 1rem;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(67, 97, 238, 0.2);
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            .award-meta {
+                gap: 1rem;
+            }
+            .award-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-trophy"></i>
+                <h1>获奖经历</h1>
+            </div>
+
+            <div class="award-list">
+                <div class="award-item">
+                    <h3><i class="fas fa-medal"></i> 第四届全国大学生C语言程序设计大赛 三等奖</h3>
+                    <div class="award-meta">
+                        <p><i class="fas fa-calendar"></i> 获奖时间：2024年5月</p>
+                        <p><i class="fas fa-globe"></i> 竞赛规模：全国1200+高校、8000+参赛选手</p>
+                    </div>
+                    <p class="award-desc"><strong>个人贡献：</strong>独立完成算法设计与代码实现，解决了字符串处理、数组排序等核心编程题，得分位列云南省前15%。</p>
+                    <p class="award-desc"><strong>竞赛收获：</strong>提升了代码调试、逻辑思维和限时编程能力，加深了对C语言底层原理的理解。</p>
+                </div>
+
+                <div class="award-item">
+                    <h3><i class="fas fa-award"></i> 挑战杯大学生课外学术科技作品竞赛 二等奖</h3>
+                    <div class="award-meta">
+                        <p><i class="fas fa-calendar"></i> 获奖时间：2023年11月</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 竞赛级别：省级（云南省）</p>
+                        <p><i class="fas fa-file-alt"></i> 项目名称：《基于大数据的昆明社区养老需求分析》</p>
+                    </div>
+                    <p class="award-desc"><strong>个人贡献：</strong>负责数据爬取、清洗和可视化，使用Python爬取公开养老数据（10万+条），通过Matplotlib制作分析图表，为项目提供核心数据支撑。</p>
+                    <p class="award-desc"><strong>竞赛收获：</strong>掌握了大数据分析全流程，提升了团队协作、学术报告撰写和数据解读能力。</p>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> 返回概览页</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张显平 - 学业情况</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #5874f5;
+            --secondary: #3f37c9;
+            --bg-light: #f8f9fa;
+            --text-dark: #2b2d42;
+            --text-gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 20px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", "Microsoft YaHei", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(120deg, #f5f7ff 0%, #eef2ff 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            padding-top: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 4px solid var(--primary);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f2ff;
+        }
+
+        .card-header h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .card-header i {
+            font-size: 2rem;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            border-radius: 50%;
+        }
+
+        .academic-info {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            line-height: 2.2;
+            margin-bottom: 2rem;
+        }
+
+        .academic-info p {
+            margin: 1rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .academic-info p i {
+            color: var(--primary-light);
+            margin-top: 0.5rem;
+            min-width: 20px;
+        }
+
+        /* 课程表格 */
+        .core-courses {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+        }
+
+        .core-courses h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .courses-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .courses-table th, .courses-table td {
+            padding: 1.2rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .courses-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .courses-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .courses-table tr:hover {
+            background: #f9faff;
+        }
+
+        .courses-table td:first-child {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .courses-table td:last-child {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(67, 97, 238, 0.2);
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            .courses-table th, .courses-table td {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+            .academic-info p {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>学业情况</h1>
+            </div>
+
+            <div class="academic-info">
+                <p><i class="fas fa-chart-line"></i><strong>学业成绩：</strong>GPA 3.4/4.0（均分84分），专业排名前30%（本专业共120人），连续2年获得校级学业奖学金。</p>
+                <p><i class="fas fa-check-circle"></i><strong>学业记录：</strong>大学期间无任何挂科记录，所有核心课程均达到良好及以上水平。</p>
+                <p><i class="fas fa-book"></i><strong>学习亮点：</strong>重点钻研大数据处理、数据分析方向，课程设计多次被评为"优秀"，主动学习行业前沿技术（如Spark、Flink）。</p>
+                <p><i class="fas fa-laptop"></i><strong>实践课程：</strong>完成大数据综合实训、数据库设计、Python编程实践等核心实践课程，均取得优异成绩。</p>
+            </div>
+
+            <!-- 核心课程板块 -->
+            <div class="core-courses">
+                <h3><i class="fas fa-book-open"></i> 核心课程及成绩</h3>
+                <table class="courses-table">
+                    <thead>
+                        <tr>
+                            <th>课程名称</th>
+                            <th>成绩/评级</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Python程序设计</td>
+                            <td>88分（优秀）</td>
+                        </tr>
+                        <tr>
+                            <td>大数据分析与应用</td>
+                            <td>86分</td>
+                        </tr>
+                        <tr>
+                            <td>数据库原理与应用</td>
+                            <td>85分</td>
+                        </tr>
+                        <tr>
+                            <td>数据结构与算法</td>
+                            <td>82分</td>
+                        </tr>
+                        <tr>
+                            <td>机器学习基础</td>
+                            <td>80分</td>
+                        </tr>
+                        <tr>
+                            <td>Hadoop大数据框架</td>
+                            <td>83分</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> 返回概览页</a>
+        </div>
+    </div>
+</body>
+</html>

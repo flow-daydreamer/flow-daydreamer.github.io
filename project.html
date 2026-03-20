@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张显平 - 项目经历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-light: #5874f5;
+            --secondary: #3f37c9;
+            --bg-light: #f8f9fa;
+            --text-dark: #2b2d42;
+            --text-gray: #6c757d;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-hover: 0 8px 20px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", "Microsoft YaHei", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(120deg, #f5f7ff 0%, #eef2ff 100%);
+            min-height: 100vh;
+            color: var(--text-dark);
+            padding-top: 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-top: 4px solid var(--primary);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f2ff;
+        }
+
+        .card-header h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .card-header i {
+            font-size: 2rem;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            border-radius: 50%;
+        }
+
+        /* 项目列表 */
+        .project-list {
+            display: grid;
+            gap: 2.5rem;
+        }
+
+        .project-item {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            overflow: hidden;
+            transition: var(--transition);
+            border-top: 3px solid var(--primary-light);
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-top-color: var(--secondary);
+        }
+
+        .project-header {
+            background: var(--bg-light);
+            padding: 1.5rem;
+        }
+
+        .project-header h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .project-header h3 i {
+            color: var(--primary-light);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-tags .tag {
+            background: var(--primary-light);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .project-tags .tag:hover {
+            background: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        .project-body {
+            padding: 1.8rem;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-meta p {
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .project-meta p i {
+            color: var(--primary-light);
+        }
+
+        .project-desc, .project-responsibility, .project-result {
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .project-responsibility {
+            padding-left: 1rem;
+            border-left: 2px solid var(--primary-light);
+        }
+
+        .project-result {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(67, 97, 238, 0.2);
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            .project-header, .project-body {
+                padding: 1.2rem;
+            }
+            .project-meta {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-laptop-code"></i>
+                <h1>项目经历</h1>
+            </div>
+
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3><i class="fas fa-chart-pie"></i> 校园消费数据分析系统</h3>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <p><i class="fas fa-calendar"></i> 项目时间：2024年3月 - 2024年6月</p>
+                            <p><i class="fas fa-users"></i> 项目规模：个人项目</p>
+                        </div>
+                        <p class="project-desc"><strong>项目描述：</strong>基于校园一卡通消费数据，开发数据分析系统，分析学生消费习惯、食堂客流量、消费高峰时段等维度，为校园后勤管理提供数据支撑。</p>
+                        <p class="project-responsibility"><strong>个人职责：</strong>
+                            1. 使用Python爬取并清洗校园消费原始数据（共10万+条记录），处理缺失值、异常值；
+                            2. 用Pandas进行数据预处理和统计分析，计算消费均值、高峰时段等关键指标；
+                            3. 基于Matplotlib制作可视化图表（消费趋势图、食堂热度图、消费层级分布图）；
+                            4. 用SQLite搭建轻量级数据库，实现数据存储与快速查询。
+                        </p>
+                        <p class="project-result"><strong>项目成果：</strong>输出《校园消费分析报告》，为学校食堂运营优化提供数据参考，获课程设计优秀评级，代码已开源至GitHub。</p>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <h3><i class="fas fa-database"></i> 基于C语言的学生成绩管理系统</h3>
+                        <div class="project-tags">
+                            <span class="tag">C语言</span>
+                            <span class="tag">文件操作</span>
+                            <span class="tag">算法设计</span>
+                            <span class="tag">链表</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <p><i class="fas fa-calendar"></i> 项目时间：2023年9月 - 2023年11月</p>
+                            <p><i class="fas fa-users"></i> 项目规模：个人项目</p>
+                        </div>
+                        <p class="project-desc"><strong>项目描述：</strong>面向高校班级管理场景，开发轻量级成绩管理系统，支持成绩录入、查询、修改、排序、导出等核心功能，适配中小规模班级成绩管理需求。</p>
+                        <p class="project-responsibility"><strong>个人职责：</strong>
+                            1. 独立完成需求分析和功能设计，绘制流程图并编写核心代码；
+                            2. 实现基于链表的成绩数据存储，优化排序算法（冒泡/快速排序），提升查询效率；
+                            3. 设计文件读写模块，支持成绩数据持久化存储（txt格式）；
+                            4. 完成系统测试，修复边界条件bug（如空数据查询、非法输入、数据越界等）。
+                        </p>
+                        <p class="project-result"><strong>项目成果：</strong>代码行数1200+，运行稳定，可支持500+条成绩数据管理，作为C语言课程优秀案例在学院展示。</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="btn"><i class="fas fa-arrow-left"></i> 返回概览页</a>
+        </div>
+    </div>
+</body>
+</html>
