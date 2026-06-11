@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Crystal | 音乐晶境 - 总站</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 3rem 2rem;
+            background: 
+                radial-gradient(circle at 15% 20%, rgba(137, 219, 255, 0.35) 0%, transparent 35%),
+                radial-gradient(circle at 85% 75%, rgba(192, 132, 252, 0.3) 0%, transparent 40%),
+                linear-gradient(145deg, #0f172a 0%, #1e293b 40%, #272744 100%),
+                linear-gradient(50deg, rgba(96, 165, 250, 0.15) 0%, rgba(168, 85, 247, 0.1) 100%);
+            background-blend-mode: screen, overlay, normal, soft-light;
+            font-family: 'Montserrat', sans-serif;
+            color: #f8fafc;
+            text-align: center;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(90deg, #e0f2fe, #f9a8d4, #fef08a, #ddd6fe);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.05em;
+        }
+
+        .sub-slogan {
+            font-size: clamp(1rem, 2.5vw, 1.6rem);
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        .art-desc {
+            max-width: 900px;
+            margin: 0 auto 5rem;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            background: rgba(255,255,255,0.04);
+            backdrop-filter: blur(6px);
+            font-size: 1.15rem;
+            line-height: 2.2;
+            color: #e2e8f0;
+        }
+
+        .art-desc p {
+            margin-bottom: 1.5rem;
+        }
+
+        .en-art {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: #94a3b8;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .nav-card {
+            padding: 2.5rem 1.5rem;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(137, 219, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .card-pop {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(244, 114, 182, 0.05));
+        }
+        .card-jazz {
+            background: linear-gradient(135deg, rgba(202, 138, 4, 0.15), rgba(251, 191, 36, 0.05));
+        }
+        .card-rock {
+            background: linear-gradient(135deg, rgba(75, 85, 99, 0.2), rgba(30, 41, 59, 0.1));
+        }
+        .card-rnb {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(168, 85, 247, 0.05));
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+        }
+
+        .card-en {
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .footer-tip {
+            margin-top: 5rem;
+            font-size: 0.9rem;
+            color: #64748b;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">Sound Crystal</h1>
+    <p class="sub-slogan">CRYSTAL MUSIC STUDIO · 音乐晶境</p>
+
+    <div class="art-desc">
+        <p>以钻石般剔透的艺术视角，收录全球潮流音乐精华。本站聚焦Spotify年度曲风榜单，汇聚流行、爵士、摇滚、R&B四大主流音乐领域，甄选年度十佳金曲。</p>
+        <p class="en-art">"Music is the crystal of soul, every note shines forever."</p>
+        <p>我们致力于打造沉浸式欧美现代音乐空间，用光影与色彩烘托旋律魅力，让每一位乐迷邂逅年度人气曲目，在多元曲风里感受音乐独有的艺术力量。选择对应曲风，开启你的年度音乐之旅。</p>
+    </div>
+
+    <div class="nav-wrap">
+        <a href="1.html" class="nav-card card-pop">
+            <h3 class="card-title">流行风尚</h3>
+            <p class="card-en">Pop Music</p>
+            <p class="card-desc">Spotify 年度流行榜单 · 聆听全球热门旋律</p>
+        </a>
+        <a href="2.html" class="nav-card card-jazz">
+            <h3 class="card-title">爵士风情</h3>
+            <p class="card-en">Jazz Music</p>
+            <p class="card-desc">Spotify 年度爵士榜单 · 品味复古优雅乐章</p>
+        </a>
+        <a href="3.html" class="nav-card card-rock">
+            <h3 class="card-title">摇滚力量</h3>
+            <p class="card-en">Rock Music</p>
+            <p class="card-desc">Spotify 年度摇滚榜单 · 释放热血音乐态度</p>
+        </a>
+        <a href="4.html" class="nav-card card-rnb">
+            <h3 class="card-title">灵魂律动</h3>
+            <p class="card-en">R&B Music</p>
+            <p class="card-desc">Spotify 年度R&B榜单 · 邂逅温柔灵魂之声</p>
+        </a>
+    </div>
+
+    <div class="footer-tip">
+        Crystal Music · Modern European & American Style
+    </div>
+    <footer>23110941008 张显平 Zhang Xianping</footer>
+</body>
+</html>

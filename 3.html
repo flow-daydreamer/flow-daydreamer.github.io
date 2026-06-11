@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Edge | 摇滚力量 · 年度榜单</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            padding: 3rem 2rem;
+            background: 
+                radial-gradient(circle at 30% 25%, rgba(156, 163, 175, 0.35) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(75, 85, 99, 0.25) 0%, transparent 35%),
+                linear-gradient(145deg, #0f1118 0%, #1f2937 50%, #374151 100%),
+                linear-gradient(50deg, rgba(229, 231, 235, 0.15) 0%, rgba(107, 114, 128, 0.08) 100%);
+            background-blend-mode: screen, overlay, normal, soft-light;
+            font-family: 'Montserrat', sans-serif;
+            color: #f9fafb;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 0.6rem 1.8rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 30px;
+            color: #f9fafb;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.6);
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #d1d5db, #f3f4f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.05em;
+        }
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: #d1d5db;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .chart-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            color: #f97316;
+            letter-spacing: 0.1em;
+        }
+        .chart-wrap {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .rank-top {
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(229, 231, 235, 0.4);
+            box-shadow: 0 0 15px rgba(156, 163, 175, 0.2);
+        }
+        .rank-top .num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #e5e7eb, #f97316);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        .rank-top .song {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .rank-top .artist {
+            font-size: 1rem;
+            color: #d1d5db;
+            margin-top: 0.3rem;
+        }
+        .rank-normal {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.6rem;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            font-size: 1rem;
+        }
+        .rank-normal .num {
+            color: #f97316;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back To Home</a>
+    <h1 class="title">Rock Edge</h1>
+    <p class="subtitle">ROCK MUSIC · ROAR WITH THE RIFF</p>
+    <p class="chart-name">Spotify Annual Rock Top 10 · 年度摇滚十佳金曲</p>
+
+    <div class="chart-wrap">
+        <div class="rank-top">
+            <span class="num">01</span>
+            <span class="song">Bohemian Rhapsody</span>
+            <div class="artist">Artist : Queen</div>
+        </div>
+        <div class="rank-top">
+            <span class="num">02</span>
+            <span class="song">Imagine</span>
+            <div class="artist">Artist : John Lennon</div>
+        </div>
+        <div class="rank-top">
+            <span class="num">03</span>
+            <span class="song">Sweet Child O' Mine</span>
+            <div class="artist">Artist : Guns N' Roses</div>
+        </div>
+
+        <div class="rank-normal"><span class="num">04</span>Smells Like Teen Spirit - Nirvana</div>
+        <div class="rank-normal"><span class="num">05</span>Hotel California - Eagles</div>
+        <div class="rank-normal"><span class="num">06</span>Stairway To Heaven - Led Zeppelin</div>
+        <div class="rank-normal"><span class="num">07</span>Another One Bites The Dust - Queen</div>
+        <div class="rank-normal"><span class="num">08</span>Born To Run - Bruce Springsteen</div>
+        <div class="rank-normal"><span class="num">09</span>Whole Lotta Love - Led Zeppelin</div>
+        <div class="rank-normal"><span class="num">10</span>Light My Fire - The Doors</div>
+    </div>
+    <footer>23110941008 张显平 Zhang Xianping</footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Glow | 流行风尚 · 年度榜单</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            padding: 3rem 2rem;
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(244, 114, 182, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.25) 0%, transparent 35%),
+                linear-gradient(145deg, #4a1c35 0%, #6b274b 50%, #882e5e 100%),
+                linear-gradient(50deg, rgba(244, 114, 182, 0.2) 0%, rgba(219, 39, 119, 0.1) 100%);
+            background-blend-mode: screen, overlay, normal, soft-light;
+            font-family: 'Montserrat', sans-serif;
+            color: #fef2f7;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 0.6rem 1.8rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 30px;
+            color: #fef2f7;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.6);
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #f9a8d4, #f472b6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.05em;
+        }
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: #fbcfe8;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .chart-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            color: #f9a8d4;
+            letter-spacing: 0.1em;
+        }
+        .chart-wrap {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        /* 前三名特殊样式 */
+        .rank-top {
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(244, 114, 182, 0.4);
+            box-shadow: 0 0 15px rgba(244, 114, 182, 0.2);
+        }
+        .rank-top .num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #f472b6, #f9a8d4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        .rank-top .song {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .rank-top .artist {
+            font-size: 1rem;
+            color: #fbcfe8;
+            margin-top: 0.3rem;
+        }
+        /* 普通榜单样式 */
+        .rank-normal {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.6rem;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            font-size: 1rem;
+        }
+        .rank-normal .num {
+            color: #f9a8d4;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back To Home</a>
+    <h1 class="title">Pop Glow</h1>
+    <p class="subtitle">POP MUSIC · LIVE IN THE MELODY</p>
+    <p class="chart-name">Spotify Annual Pop Top 10 · 年度流行十佳金曲</p>
+
+    <div class="chart-wrap">
+        <div class="rank-top">
+            <span class="num">01</span>
+            <span class="song">Cruel Summer</span>
+            <div class="artist">Artist : Taylor Swift</div>
+        </div>
+        <div class="rank-top">
+            <span class="num">02</span>
+            <span class="song">vampire</span>
+            <div class="artist">Artist : Olivia Rodrigo</div>
+        </div>
+        <div class="rank-top">
+            <span class="num">03</span>
+            <span class="song">Flowers</span>
+            <div class="artist">Artist : Miley Cyrus</div>
+        </div>
+
+        <div class="rank-normal"><span class="num">04</span>Die For You - The Weeknd</div>
+        <div class="rank-normal"><span class="num">05</span>As It Was - Harry Styles</div>
+        <div class="rank-normal"><span class="num">06</span>Watermelon Sugar - Harry Styles</div>
+        <div class="rank-normal"><span class="num">07</span>Blinding Lights - The Weeknd</div>
+        <div class="rank-normal"><span class="num">08</span>About Damn Time - Lizzo</div>
+        <div class="rank-normal"><span class="num">09</span>Hold On - Justin Bieber</div>
+        <div class="rank-normal"><span class="num">10</span>Bad Habits - Ed Sheeran</div>
+    </div>
+    <footer>23110941008 张显平 Zhang Xianping</footer>
+</body>
+</html>

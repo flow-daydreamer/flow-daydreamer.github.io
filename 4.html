@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Vibe | 灵魂律动 · 年度榜单</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            padding: 3rem 2rem;
+            background: 
+                radial-gradient(circle at 60% 20%, rgba(168, 85, 247, 0.4) 0%, transparent 40%),
+                radial-gradient(circle at 25% 75%, rgba(124, 58, 237, 0.25) 0%, transparent 35%),
+                linear-gradient(145deg, #2c1b47 0%, #432e6b 50%, #583c87 100%),
+                linear-gradient(50deg, rgba(168, 85, 247, 0.2) 0%, rgba(124, 58, 237, 0.1) 100%);
+            background-blend-mode: screen, overlay, normal, soft-light;
+            font-family: 'Montserrat', sans-serif;
+            color: #f5f3ff;
+            text-align: center;
+        }
+        .back-btn {
+            display: inline-block;
+            padding: 0.6rem 1.8rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 30px;
+            color: #f5f3ff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.6);
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #c4b5fd, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 0.05em;
+        }
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: #ddd6fe;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .chart-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            color: #a855f7;
+            letter-spacing: 0.1em;
+        }
+        .chart-wrap {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .rank-top {
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+        }
+        .rank-top .num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(90deg, #a855f7, #c4b5fd);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+        .rank-top .song {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .rank-top .artist {
+            font-size: 1rem;
+            color: #ddd6fe;
+            margin-top: 0.3rem;
+        }
+        .rank-normal {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.6rem;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.03);
+            font-size: 1rem;
+        }
+        .rank-normal .num {
+            color: #a855f7;
+            font-weight: 600;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back To Home</a>
+    <h1 class="title">Soul Vibe</h1>
+    <p class="subtitle">R&B MUSIC · FEEL THE SOUL RHYTHM</p>
+    <p class="chart-name">Spotify Annual R&B Top 10 · 年度R&B十佳金曲</p>
+
+    <div class="chart-wrap">
+        <div class="rank-top">
+            <span class="num">01</span>
+            <span class="song">Die For You</span>
+            <div class="artist">Artist : The Weeknd</div>
+        </div>
+        <div class="rank-top">
+            <span class="num">02</span>
+            <span class="song">Snooze</span>
+            <div class="artist">Artist : SZA</div>
+        </div>
+        <div class="rank-top">
+            <span class="num">03</span>
+            <span class="song">Kill Bill</span>
+            <div class="artist">Artist : SZA</div>
+        </div>
+
+        <div class="rank-normal"><span class="num">04</span>Blinding Lights - The Weeknd</div>
+        <div class="rank-normal"><span class="num">05</span>Sure Thing - Miguel</div>
+        <div class="rank-normal"><span class="num">06</span>Adorn - Miguel</div>
+        <div class="rank-normal"><span class="num">07</span>Party Monster - The Weeknd</div>
+        <div class="rank-normal"><span class="num">08</span>Good Days - SZA</div>
+        <div class="rank-normal"><span class="num">09</span>Exchange - Bryson Tiller</div>
+        <div class="rank-normal"><span class="num">10</span>Believe - Justin Bieber</div>
+    </div>
+    <footer>23110941008 张显平 Zhang Xianping</footer>
+</body>
+</html>
